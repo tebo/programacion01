@@ -1,6 +1,6 @@
 # Programación 1 - Gestión 1 2025 - UPB
 
-Este repositorio contiene los ejercicios de clase del curso de Programación 1 de la Universidad Privada Boliviana (UPB) para la gestión 1 del año 2025.
+Este repositorio contiene los ejercicios de clase del curso de Programación 1 de la Universidad Privada Boliviana (UPB) para la gestión 1 del año 2025. 
 
 ## Contenido
 
@@ -8,11 +8,6 @@ Este repositorio contiene los ejercicios de clase del curso de Programación 1 d
 - Proyectos de clase
 - Material de apoyo
 
-## Estructura del repositorio
-
-- `/ejercicios`: Contiene los ejercicios prácticos realizados en clase.
-- `/proyectos`: Contiene los proyectos de clase.
-- `/material`: Contiene material de apoyo y recursos adicionales.
 
 ## Instrucciones
 
@@ -34,3 +29,5 @@ Si deseas contribuir a este repositorio, por favor sigue los siguientes pasos:
 Para cualquier consulta o duda, puedes contactarte con el profesor del curso o con los asistentes de clase.
 
 ¡Buena suerte y feliz programación!
+
+Generado con copilot

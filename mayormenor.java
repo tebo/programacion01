@@ -1,3 +1,5 @@
+// Ejercicio que pide tres números y los ordena de mayor a menor y de menor a mayor
+// Se importa la librería Scanner
 import java.util.Scanner;
 
 public class mayormenor {
