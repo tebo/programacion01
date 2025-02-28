@@ -6,13 +6,27 @@ public class calculadoradinamica {
         Scanner sc = new Scanner(System.in);
         System.out.println("1. Suma");
         System.out.println("2. Resta");
-        System.out.println("3. Multiplicación");
-        System.out.println("4. División");
+        System.out.println("3. Factorial");
         System.out.println("5. Salir");
         System.out.println("Ingrese la opción deseada: ");
         int opcion = sc.nextInt();
-        sc.close();
         return opcion;
+    }
+
+    public static int[] datos (int n, char operacion) {
+        Scanner sc = new Scanner(System.in);
+        int[] valores = new int[n];
+        System.out.println("Ingrese los valores de la operacion " );
+        for (int i = 0; i < n; i++) {
+            String dato = sc.next();
+            if (dato.equals("=")) {
+                break;
+            }
+            valores[i] = Integer.parseInt(dato);
+            System.out.println(" " + operacion + " ");
+        }
+
+        return valores;
     }
 
     public static int suma(int[] valores) {
@@ -32,55 +46,44 @@ public class calculadoradinamica {
         return resta;
     }
 
-    public static int multiplicacion(int[] valores) {
-        int multiplicacion = 0;
-        for (int i = 0; i < valores.length; i++) {
-            multiplicacion *= valores[i];
+    public static int factorial(int[] valores) {
+        int factorial = 1;
+        for (int i = 1; i <= valores[0]; i++) {
+            factorial *= i;
         }
-        return multiplicacion;
+        return factorial;
     }
 
-    public static int division(int[] valores) {
-        int division = 0;
-        for (int i = 0; i < valores.length; i++) {
-            division /= valores[i];
-        }
-        return division;
-    }
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int opcion = menu();
 
-        int [] valores = new int[10];
+        int[] valores = new int[10];
         int i = 0;
-
-        do {
-            System.out.println("Ingrese el valor " + (i) + ": ");
-            String dato = sc.next();
-            if (dato.equals("=")) {
+             
+        switch (opcion) {
+            case 1:
+                valores = datos(10, '+');
+                System.out.println("La suma es: " + suma(valores));
                 break;
-            }
-            valores[i] = Integer.parseInt(dato);
-            i++;
-        } while (i < 10 );
-        
-        if (opcion == 1) {
-            System.out.println("La suma es: " + suma(valores));
-        } else if (opcion == 2) {
-            System.out.println("La resta es: " + resta(valores));
-        } else if (opcion == 3) {
-            System.out.println("La multiplicación es: " + multiplicacion(valores));
-        } else if (opcion == 4) {
-            System.out.println("La división es: " + division(valores));
-        } else if (opcion == 5) {
-            System.out.println("Adiós");
-        } 
-        else {
-            System.out.println("Opción no válida");
+            case 2:
+                valores = datos(5, '-');
+                System.out.println("La resta es: " + resta(valores));
+                break;
+            case 3:
+                valores = datos(1, '!');
+                System.out.println("El factorial es: " + factorial(valores));
+                break;
+            case 5:
+                System.out.println("Adiós");
+                break; 
+            default:
+                System.out.println("Opción no válida");
+                break;
         }
+        
 
-        sc.close();
-                 
+        sc.close();            
 }
 }
