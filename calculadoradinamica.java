@@ -9,8 +9,14 @@ public class calculadoradinamica {
         System.out.println("3. Factorial");
         System.out.println("5. Salir");
         System.out.println("Ingrese la opción deseada: ");
-        int opcion = sc.nextInt();
-        return opcion;
+        
+        try {
+            int opcion = sc.nextInt();
+            return opcion;
+        } catch (Exception e) {
+            System.out.println("Caracter no valido -> " + e.getMessage());
+            return 0;
+        }
     }
 
     public static int[] datos (int n, char operacion) {
@@ -22,7 +28,12 @@ public class calculadoradinamica {
             if (dato.equals("=")) {
                 break;
             }
-            valores[i] = Integer.parseInt(dato);
+            try {
+                valores[i] = Integer.parseInt(dato);
+            } catch (NumberFormatException e) {
+                System.out.println("Caracter no valido -> " + e.getMessage());
+                valores[i] = 0;
+            }
             System.out.println(" " + operacion + " ");
         }
 
@@ -56,15 +67,17 @@ public class calculadoradinamica {
 
     public static void main(String[] args) {
 
+        int opcion = 0;
         Scanner sc = new Scanner(System.in);
-        int opcion = menu();
+        do {
+            opcion = menu();
+       
 
         int[] valores = new int[10];
         int i = 0;
              
         switch (opcion) {
-            case 1:
-                valores = datos(10, '+');
+            case 1 -> valores = datos(10, '+');
                 System.out.println("La suma es: " + suma(valores));
                 break;
             case 2:
@@ -83,7 +96,7 @@ public class calculadoradinamica {
                 break;
         }
         
-
+    } while (opcion != 5);
         sc.close();            
 }
 }
