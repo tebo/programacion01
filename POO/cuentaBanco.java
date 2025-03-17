@@ -1,3 +1,4 @@
+package POO;
 public class cuentaBanco {
     private String nombre;
     private String apellido;

@@ -77,7 +77,7 @@ public class calculadoradinamica {
         int i = 0;
              
         switch (opcion) {
-            case 1 -> valores = datos(10, '+');
+            case 1 : valores = datos(10, '+');
                 System.out.println("La suma es: " + suma(valores));
                 break;
             case 2:
