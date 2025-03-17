@@ -1,3 +1,4 @@
+package vectoresMatrices;
 // ejercico para la suma de matrices
 import java.util.Scanner;
 public class sumaMatrices {

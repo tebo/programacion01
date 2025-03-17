@@ -1,3 +1,4 @@
+package vectoresMatrices;
 // Ejercicio de ingreso de datos en un vector
 // Se importa la libreria Scanner
 import java.util.Scanner;

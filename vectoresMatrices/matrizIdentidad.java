@@ -1,3 +1,4 @@
+package vectoresMatrices;
 // Ejercicio que genera una matriz de identidad
 import java.util.Scanner;   // Importar la clase Scanner
 public class matrizIdentidad {

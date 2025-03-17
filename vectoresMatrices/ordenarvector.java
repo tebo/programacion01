@@ -1,3 +1,4 @@
+package vectoresMatrices;
 // Ejercicio 1.2: Ordenar un vector de mayor a menor
 // Crear un programa que pida al usuario cuántos valores va a ingresar, luego solicite los valores y los almacene en un vector. Finalmente, el programa debe ordenar los valores de mayor a menor y mostrarlos en pantalla.
 import java.util.Scanner;
