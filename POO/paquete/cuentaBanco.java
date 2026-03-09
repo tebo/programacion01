@@ -1,4 +1,4 @@
-package POO;
+package POO.paquete;
 public class cuentaBanco {
     private String nombre;
     private String apellido;
