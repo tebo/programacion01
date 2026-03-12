@@ -1,4 +1,5 @@
-public class Main {
+package POO;
+public class circulo {
     static double calcularArea(double radio) {
         return Math.PI * radio * radio;
     }
