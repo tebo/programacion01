@@ -1,3 +1,4 @@
+package POO.paquetebase;
 public class Coche {
     // Atributos (Estado)
     String marca;

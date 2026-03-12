@@ -1,3 +1,4 @@
+package POO.paquetebase;
 /**
  * Programa 1: Conceptos Básicos de POO
  * Demuestra: Clases, Atributos, Métodos y Constructores

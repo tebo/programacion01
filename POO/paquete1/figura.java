@@ -1,4 +1,4 @@
-package POO.paquete;
+package POO.paquete1;
 
 abstract class figura {
     private String color;
