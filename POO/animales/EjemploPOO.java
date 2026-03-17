@@ -1,3 +1,4 @@
+package POO.animales;
 // Ejemplo básico de Programación Orientada a Objetos en Java
 // Este ejemplo demuestra los conceptos fundamentales: clases, objetos, encapsulamiento, herencia y polimorfismo
 
