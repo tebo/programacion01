@@ -1,29 +1,31 @@
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        Circulotest c1 = new Circulotest(5.0, "rojo");
-        Circulotest c2 = new Circulotest(3.5, "azul");
-        System.out.println(c1);                       // toString()
+        Circulotest c1 = new Circulotest();
+        Circulotest c2 = new Circulotest();
+        c1.radio = 5.0;
+        c1.color = "rojo";
+        c2.radio = 3.5;
+        c2.color = "azul";
+        //System.out.println(c1);                       // toString()
         System.out.println("Area c1: " + c1.calcularArea());
         System.out.println("Area c2: " + c2.calcularArea());
+        System.out.println("Perimetro c1: " + c1.calcularPerimetro());
+        System.out.println("Perimetro c2: " + c2.calcularPerimetro());
     }
 }
 
 
 class Circulotest {
-    private double radio;          // atributo encapsulado
-    private String color;
+    double radio;          // atributo encapsulado
+    String color;
 
-    public Circulotest(double radio, String color) {   // constructor
-        this.radio = radio;
-        this.color = color;
+    public double calcularArea() { 
+        return Math.PI * radio * radio; 
     }
 
-    public double calcularArea()      { return Math.PI * radio * radio; }
-    public double calcularPerimetro() { return 2 * Math.PI * radio;     }
-
-    @Override
-    public String toString() {
-        return "Circulo[radio=" + radio + ", color=" + color + "]";
+    public double calcularPerimetro() { 
+        return 2 * Math.PI * radio;     
     }
+
 }
